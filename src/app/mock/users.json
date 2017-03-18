@@ -1,0 +1,12 @@
+[{
+    "email": "joe@itugogo.com",
+    "isAdmin": false,
+    "password": "123456",
+    "name":"Joe"
+}, 
+{
+    "email": "admin@itugogo.com",
+    "isAdmin": true,
+    "password": "123456",
+    "name":"admin"
+}]

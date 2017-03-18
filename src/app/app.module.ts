@@ -9,13 +9,18 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
 import { PackageListComponent } from './components/package-list/package-list.component';
 import { PackageDetailComponent } from './components/package-detail/package-detail.component';
+import { LoginComponent } from './components/login/login.component';
+
+import { AuthGuard } from './services/guard.service';
+import { AuthenService } from './services/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     PackageListComponent,
-    PackageDetailComponent
+    PackageDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,12 @@ import { PackageDetailComponent } from './components/package-detail/package-deta
     HttpModule,
     routing
   ],
-  providers: [],
+  
+  providers: [
+    AuthGuard, {
+    provide: "auth",
+    useClass: AuthenService
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
