@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+
 declare var localStorage: any;
 
 export interface User {
@@ -20,15 +22,16 @@ export class AuthenService {
     constructor() { }
     private mockData: User[] = require('../mock/users.json');
 
-    login(username: string, password: string): Promise<boolean> {
+    login(username: string, password: string): Promise<LoginUser> {
         return new Promise((resolve, reject) => {
-            this.mockData.map((user) => {
+            for (let user of this.mockData) {
                 if (user.email == username && user.password == password) {
                     let loginUser: LoginUser = { "isAdmin": user.isAdmin, "name": user.name } as LoginUser;
                     localStorage.setItem('user', JSON.stringify(loginUser));
                     resolve(loginUser);
+                    return;
                 }
-            })
+            }
             console.log("reject login");
             reject("Authenication Error");
         });

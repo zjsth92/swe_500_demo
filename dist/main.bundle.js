@@ -412,13 +412,15 @@ var AuthenService = (function () {
     AuthenService.prototype.login = function (username, password) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            _this.mockData.map(function (user) {
+            for (var _i = 0, _a = _this.mockData; _i < _a.length; _i++) {
+                var user = _a[_i];
                 if (user.email == username && user.password == password) {
                     var loginUser = { "isAdmin": user.isAdmin, "name": user.name };
                     localStorage.setItem('user', JSON.stringify(loginUser));
                     resolve(loginUser);
+                    return;
                 }
-            });
+            }
             console.log("reject login");
             reject("Authenication Error");
         });
