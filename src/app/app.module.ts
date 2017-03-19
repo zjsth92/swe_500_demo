@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import { AuthGuard } from './services/guard.service';
 import { AuthenService } from './services/auth.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AuthenService } from './services/auth.service';
     SearchComponent,
     PackageListComponent,
     PackageDetailComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

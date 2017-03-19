@@ -11,8 +11,9 @@ export class LoginComponent implements OnInit {
   private username: string;
   private password: string;
   private returnUrl: string;
+  private errorMessage: string;
 
-  constructor(private route: ActivatedRoute, private router: Router, @Inject("auth") private auth) {}
+  constructor(private route: ActivatedRoute, private router: Router, @Inject("auth") private auth) { }
 
   ngOnInit() {
     this.auth.logout();
@@ -21,16 +22,13 @@ export class LoginComponent implements OnInit {
 
   signIn() {
     this.auth
-        .login(this.username, this.password)
-        .then((result)=>{
-          this.router.navigate([this.returnUrl]);
-        })
-        .catch((error)=>this.loginFailed);
-  }
-
-  loginFailed(error){
-    // show loginFailed
-    console.log("login failed");
+      .login(this.username, this.password)
+      .then((result) => {
+        this.router.navigate([this.returnUrl]);
+      })
+      .catch((error) => {
+        this.errorMessage = error;
+      });
   }
 
 }

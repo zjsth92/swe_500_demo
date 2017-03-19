@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of'
+
+import { LoginUser } from '../models/login-user.model';
 
 declare var localStorage: any;
 
@@ -11,18 +13,13 @@ export interface User {
     name: string
 };
 
-export interface LoginUser {
-    isAdmin: boolean,
-    name: string
-};
-
 @Injectable()
 export class AuthenService {
 
     constructor() { }
     private mockData: User[] = require('../mock/users.json');
 
-    login(username: string, password: string): Promise<LoginUser> {
+    public login(username: string, password: string): Promise<LoginUser> {
         return new Promise((resolve, reject) => {
             for (let user of this.mockData) {
                 if (user.email == username && user.password == password) {
@@ -32,12 +29,20 @@ export class AuthenService {
                     return;
                 }
             }
-            console.log("reject login");
-            reject("Authenication Error");
+            reject("Authenication Failed");
         });
     }
 
     public logout() {
         localStorage.removeItem('user');
     }
+
+    public getLoginUser(): Observable<LoginUser> {
+        return Observable.of(JSON.parse(localStorage.getItem("user")) as LoginUser);
+    }
+
+    public isAuthenticated(): boolean {
+        return localStorage.getItem("user")
+    }
+
 }
