@@ -1,12 +1,16 @@
-[{
-    "email": "joe@itugogo.com",
-    "isAdmin": false,
-    "password": "123456",
-    "name":"Joe"
-}, 
-{
-    "email": "admin@itugogo.com",
-    "isAdmin": true,
-    "password": "123456",
-    "name":"admin"
-}]
+[
+    {
+        "email": "joe@itugogo.com",
+        "isAdmin": false,
+        "password": "123456",
+        "name": "Joe",
+        "profileUrl": "http://www.aisonc.com/qqtx/upFiles/infoImg/coll/20160124/OT20160124084411974.jpg"
+    },
+    {
+        "email": "admin@itugogo.com",
+        "isAdmin": true,
+        "password": "123456",
+        "name": "admin",
+        "profileUrl": "https://s-media-cache-ak0.pinimg.com/564x/45/84/c0/4584c0b11190ed3bd738acf8f1d24fa4.jpg"
+    }
+]

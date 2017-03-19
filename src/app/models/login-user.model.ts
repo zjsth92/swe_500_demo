@@ -1,4 +1,6 @@
 export interface LoginUser {
     isAdmin: boolean,
-    name: string
+    name: string,
+    email: string,
+    profileUrl: string;
 };

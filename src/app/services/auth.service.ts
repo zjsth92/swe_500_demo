@@ -11,7 +11,8 @@ export interface User {
     email: string,
     isAdmin: boolean,
     password: string,
-    name: string
+    name: string,
+    profileUrl: string
 };
 
 @Injectable()
@@ -25,7 +26,12 @@ export class AuthenService {
         return new Promise((resolve, reject) => {
             for (let user of this.mockData) {
                 if (user.email == username && user.password == password) {
-                    let loginUser: LoginUser = { "isAdmin": user.isAdmin, "name": user.name } as LoginUser;
+                    let loginUser: LoginUser = { 
+                        "isAdmin": user.isAdmin, 
+                        "name": user.name, 
+                        "email": user.email, 
+                        "profileUrl": user.profileUrl 
+                    } as LoginUser;
                     localStorage.setItem('user', JSON.stringify(loginUser));
                     this.loginUser.next(loginUser)
                     resolve(loginUser);
