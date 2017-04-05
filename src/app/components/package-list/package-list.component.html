@@ -1,3 +1,45 @@
-<p>
-  package-list works!
-</p>
+<app-navbar></app-navbar>
+<div class="container" id="list-container">
+  <div class="row">
+      <div class="image" *ngFor="let package of packages" id="{{package.city}}">
+        <a href="/detail"><img class="lazy" [src]="package.backgroundUrl" style="display: block;">
+          <div class="top-left">
+            <table>
+              <tbody>
+                <tr>
+                  <td rowspan="2">
+                    <h3>
+                      <i *ngIf="package.transport == 'flight'" class="fa fa-plane" aria-hidden="true"></i>
+                      <i *ngIf="package.transport == 'train'" class="fa fa-train" aria-hidden="true"></i>
+                      <i *ngIf="package.transport == 'car'" class="fa fa-car" aria-hidden="true"></i>
+                    </h3>
+                  </td>
+                  <td rowspan="2">
+                    <h4>+</h4>
+                  </td>
+                  <td><i class="fa fa-star" aria-hidden="true" *ngFor="let star of count(package.hotel.star)"></i></td>
+                </tr>
+                <tr>
+                  <td>hotel</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="center">
+            <h3 class="city">{{package.city}}</h3>
+            <p class="country">{{package.country}}</p>
+            <p> • </p>
+            <p class="temperature">{{package.temperature}}</p>
+          </div>
+          <div class="top-right">
+            <h2 style="display:inline;"><sup>$</sup></h2>
+            <p class="price" style="display:inline;">{{package.price}}</p>
+            <h3 style="display:inline;"> p.p.</h3>
+          </div>
+          <div class="top-right-low">
+            <p>{{package.duration.day}} days • {{package.duration.night}} nights</p>
+          </div>
+        </a>
+      </div>
+  </div>
+</div>

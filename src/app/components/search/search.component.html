@@ -1,75 +1,82 @@
-<div class="jumbotron">
+<app-navbar></app-navbar>
+<div class="darken">
   <div class="container">
-    <h1 class="text-center">ITUGOGO</h1>
-    <p class="text-center">Discover the best travel plan</p>
+    <h1 class="text-center" id="title">HolidayPlan</h1>
+    <p class="text-center" id="slogan">Discover the best travel plan</p>
 
 
     <div class="total">
       <div class="container">
         <div class="row">
-          <!-- First line-->
-          <!-- FROM input-->
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="form-group has-success">
-                <label class="form-control-label" for="inputFrom">FROM</label>
-                <input type="text" class="form-control form-control-success" id="location">
+          <form>
+            <!-- First line-->
+            <!-- FROM input-->
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group has-success">
+                  <label class="form-control-label" for="inputFrom">FROM</label>
+                  <input type="text" class="form-control form-control-success" id="location">
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Second line-->
-          <div class="row">
-            <!-- DURATION input-->
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="form-group has-success">
-                <label class="form-control-label" for="inputFrom">HOLIDAY DURATION</label>
-                <input type="text" class="form-control form-control-success" id="duration">
+            <!-- Second line-->
+            <div class="row">
+              <!-- DURATION input-->
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group has-success">
+                  <label class="form-control-label" for="inputFrom">HOLIDAY DURATION</label>
+                  <input type="text" class="form-control form-control-success" id="duration">
+                </div>
+              </div>
+              <!-- BUDGET input-->
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group has-success">
+                  <label class="form-control-label" for="inputFrom">BUDGET</label>
+                  <input type="text" class="form-control form-control-success" id="budget">
+                </div>
               </div>
             </div>
-            <!-- BUDGET input-->
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="form-group has-success">
-                <label class="form-control-label" for="inputFrom">BUDGET</label>
-                <input type="text" class="form-control form-control-success" id="budget">
-              </div>
-            </div>
-          </div>
-          <!-- Third line-->
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">
-              <button type="button" class="btn btn-default btn-circle btn-lg">
+            <!-- Third line-->
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">
+                <button class="category-button">
+                <div class="category-icon">
                 <i class="fa fa-university" aria-hidden="true"></i>
+              </div>
               </button>
-              <button type="button" class="btn btn-default btn-circle btn-lg">
+                <button class="category-button">
+              <div class="category-icon">
                 <i class="fa fa-car"></i>
+              </div>
               </button>
-              <button type="button" class="btn btn-default btn-circle btn-lg">
-                 <i class="fa fa-sun-o" aria-hidden="true"></i>
+                <button class="category-button">
+              <div class="category-icon">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+              </div>
               </button>
-             <button type="button" class="btn btn-default btn-circle btn-lg">
-                 <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                <button class="category-button">
+              <div class="category-icon">
+                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+              </div>
               </button>
-              <button type="button" class="btn btn-default btn-circle btn-lg">
-                 <i class="fa fa-leaf" aria-hidden="true"></i>
+                <button class="category-button">
+              <div class="category-icon">
+                <i class="fa fa-leaf" aria-hidden="true"></i>
+              </div>
               </button>
+              </div>
             </div>
-          </div>
-          <!-- Fourth line-->
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <button id="planSearchBtn" class="btn btn-primary btn-lg" type="button">Search</button>
+            <!-- Fourth line-->
+            <div class="row" id="search-btn">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <a href="/list"><button id="planSearchBtn" class="btn btn-primary btn-lg" type="button">SEARCH</button></a>
+              </div>
             </div>
-          </div>
-
+          </form>
         </div>
       </div>
     </div>
-
-
-
-
-
 
   </div>
 </div>

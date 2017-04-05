@@ -1,0 +1,28 @@
+{
+    "cityInfo": {
+        "region": "North America",
+        "country": "United States",
+        "city": "New York City",
+        "latitude": 40.712784,
+        "longitude": -74.005941,
+        "temp_average_C": 18,
+        "temp_average_F": 63,
+        "imageUrl": "https://destigogo.com/images/1000px/New-York-City-United-States.jpg"
+    },
+    "hotels": [
+        {
+            "name": "AKA United Nations",
+            "class": 5,
+            "price": 259,
+            "photo_url": "https://s-ec.bstatic.com/images/hotel/max1024x768/545/54586064.jpg"
+        },
+        {
+            "name": "Hotel Pennsylvania",
+            "class": 4,
+            "price": 200,
+            "photo_url": "https://t-ec.bstatic.com/images/hotel/max1024x768/577/57772519.jpg"
+        }
+    ],
+    "price": "590",
+    "description": "<dl><dd>\n\n<\/dd>\n<\/dl><p>One of the world's great cities, <b>New York City<\/b> (known as \"The Big Apple\", \"NYC,\" or just plain \"New York\") is a global center for media, entertainment, art, fashion, research, finance, and trade. The bustling, cosmopolitan heart of the 4th largest metropolis in the world and by far the most populous city in the United States, New York has long been a key entry point and a defining city for the nation.<\/p>\n<p>From the Statue of Liberty in the harbor to the Empire State Building towering over the Manhattan skyline, from the tunnels of the subway to the skyscrapers of Wall Street, from the bright signs of Times Square to the naturalistic beauty of Central Park, and from Yankee Stadium in the Bronx to Coney Island in Brooklyn, New York's landmarks are quintessential American landmarks. The city's neighborhoods and streets are so iconic they have become ingrained into the American consciousness. Here the power, wealth and culture of the United States is on full display in one of the largest and most iconic skylines in the world, in the food and music to be found around every corner, and in the diverse population of immigrants who come from every corner of the globe to take part in what this city has to offer.<\/p>\n<p>Lying at the mouth of the Hudson River in the southernmost part of the state of the same name and at the center of the Mid-Atlantic region, New York City has a population of approximately 8.2\u00a0million people. The New York Metropolitan Area, which spans lower New York, northern New Jersey, and southwestern Connecticut, has a population of 18.9\u00a0million, making it the largest metropolitan area in the U.S.<\/p>\n<p><br clear=\"all\"><\/p>\n<p><\/p>"
+}

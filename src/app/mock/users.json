@@ -1,13 +1,13 @@
 [
     {
-        "email": "joe@itugogo.com",
+        "email": "joe@holidayplan.com",
         "isAdmin": false,
         "password": "123456",
         "name": "Joe",
         "profileUrl": "http://www.aisonc.com/qqtx/upFiles/infoImg/coll/20160124/OT20160124084411974.jpg"
     },
     {
-        "email": "admin@itugogo.com",
+        "email": "admin@holidayplan.com",
         "isAdmin": true,
         "password": "123456",
         "name": "admin",

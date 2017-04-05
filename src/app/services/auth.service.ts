@@ -18,7 +18,9 @@ export interface User {
 @Injectable()
 export class AuthenService {
 
-    constructor() { }
+    constructor() { 
+
+    }
     private mockData: User[] = require('../mock/users.json');
     private loginUser = new Subject<LoginUser>();
 
@@ -33,6 +35,8 @@ export class AuthenService {
                         "profileUrl": user.profileUrl 
                     } as LoginUser;
                     localStorage.setItem('user', JSON.stringify(loginUser));
+                    console.log("login");
+                    console.log(this.loginUser);
                     this.loginUser.next(loginUser)
                     resolve(loginUser);
                     return;
