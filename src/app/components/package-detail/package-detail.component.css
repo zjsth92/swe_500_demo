@@ -1,0 +1,92 @@
+.city-img {
+    max-height: 350px;
+    max-width: 900px;
+}
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #575757;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.card {
+    background-color: #FAFAFA;
+    border:none;
+}
+
+#card-city-img {
+    margin-top: -66px;
+}
+
+.detail-container {
+    background-color: #FAFAFA;
+    box-shadow: 0px 10px 22px -7px rgba(0,0,0,0.42);
+    margin-bottom: 20px;
+}
+
+.detail-info {
+    margin-top: 65px;
+}
+
+.country-temp {
+    font-size: 17px;
+    color: #afafaf;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left-panel {
+    width: 50%;
+    float: left;
+    padding-right: 3px;
+}
+
+.right-panel {
+    width: 50%;
+    float: right;
+    text-align: left;
+    padding-left: 13px;
+    border-left: 1px solid #512da8;
+    text-align: left;
+    margin-top: 33px;
+}
+
+#total-price-title {
+    color: #575757;
+    float: right;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#total-price {
+    color: #575757;
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 38px;
+}
+
+.hotel-info {
+    padding-top: 16px;
+}
+
+p {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}

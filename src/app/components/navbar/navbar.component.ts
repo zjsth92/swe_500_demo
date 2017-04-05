@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-
 import { LoginUser } from '../../models/login-user.model';
 
 @Component({
@@ -15,11 +14,14 @@ export class NavbarComponent implements OnInit {
   private user: LoginUser;
 
   ngOnInit() {
-    this.auth.getLoginUser().subscribe(user => {
-      this.user = user;
-    }, error => {
-      console.info(error);
-    });
+    this.auth.getLoginUser()
+      .subscribe((loginUser:LoginUser) => {
+        console.log("subscribe");
+        console.log(loginUser);
+        if(loginUser){
+          this.user = loginUser;
+        } 
+      });
   }
 
   logout() {

@@ -1,3 +1,11 @@
+#title {
+    color: #fafafa;
+}
+
+#slogan {
+    color: #fafafa;
+}
+
 .total {
     position: relative;
     margin-left: auto;
@@ -45,4 +53,49 @@
 	  width: 20%;
 	 background-color: transparent;
 	 outline: none;
+}
+.category-button {
+    background-color: transparent;
+    border: none;
+}
+.category-icon {
+
+}
+
+.category-icon i {
+    font-size: 18px;
+    color: rgba(256,256,256,1);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 42px;
+    border: none;
+    border: 2px solid rgba(256,256,256,0);
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(256,256,256,0.1);
+    cursor: pointer;
+    margin-top: 0px;
+    border-radius: 100px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(256,256,256,0.1);
+    -webkit-box-shadow: 0px 5px 15px -10px rgba(42,42,42,0.25);
+    -moz-box-shadow: 0px 5px 15px -10px rgba(42,42,42,0.25);
+    box-shadow: 0px 5px 15px -10px rgba(42,42,42,0.25);
+}
+
+#search-btn {
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 480px) {
+.darken{
+background: url('palms4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+	min-height:100vh;
+}
 }

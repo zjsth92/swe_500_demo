@@ -1,0 +1,92 @@
+[
+    {
+        "backgroundUrl": "https://destigogo.com/images/1000px/St.-Andrews-Canada.jpg",
+        "city": "St. Andrews",
+        "country": "Canada",
+        "temperature": "48 °F",
+        "transport": "flight",
+        "hotel": {
+            "star": "4"
+        },
+        "duration": {
+            "day": "3",
+            "night": "2"
+        },
+        "price": "410"
+    },
+    {
+        "backgroundUrl": "https://destigogo.com/images/1000px/Detroit-United-States.jpg",
+        "city": "Detroit",
+        "country": "United States",
+        "temperature": "59 °F",
+        "transport": "train",
+        "hotel": {
+            "star": "3"
+        },
+        "duration": {
+            "day": "3",
+            "night": "2"
+        },
+        "price": "550"
+    },
+    {
+        "backgroundUrl": "https://destigogo.com/images/1000px/San-Jose-Costa-Rica.jpg",
+        "city": "San Jose",
+        "country": "United States",
+        "temperature": "78 °F",
+        "transport": "car",
+        "hotel": {
+            "star": "3"
+        },
+        "duration": {
+            "day": "3",
+            "night": "2"
+        },
+        "price": "610"
+    },
+    {
+        "backgroundUrl": "https://destigogo.com/images/1000px/San-Francisco-United-States.jpg",
+        "city": "San Francisco",
+        "country": "United States",
+        "temperature": "67 °F",
+        "transport": "car",
+        "hotel": {
+            "star": "4"
+        },
+        "duration": {
+            "day": "3",
+            "night": "2"
+        },
+        "price": "135"
+    },
+    {
+        "backgroundUrl": "https://destigogo.com/images/1000px/Las-Vegas-United-States.jpg",
+        "city": "Las Vegas",
+        "country": "United States",
+        "temperature": "81 °F",
+        "transport": "flight",
+        "hotel": {
+            "star": "4"
+        },
+        "duration": {
+            "day": "3",
+            "night": "2"
+        },
+        "price": "290"
+    },
+    {
+        "backgroundUrl": "https://destigogo.com/images/1000px/New-York-City-United-States.jpg",
+        "city": "New York City",
+        "country": "United States",
+        "temperature": "63 °F",
+        "transport": "flight",
+        "hotel": {
+            "star": "5"
+        },
+        "duration": {
+            "day": "3",
+            "night": "2"
+        },
+        "price": "590"
+    }
+]
