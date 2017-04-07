@@ -92,6 +92,7 @@
 
 @media screen and (min-width: 480px) {
 .darken{
+    padding-top: 32px;
 background: url('palms4.png');
     background-size: cover;
     background-repeat: no-repeat;

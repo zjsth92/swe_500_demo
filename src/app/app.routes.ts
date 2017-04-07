@@ -6,6 +6,8 @@ import { SearchComponent } from './components/search/search.component';
 import { LoginComponent } from './components/login/login.component';
 import { PackageListComponent } from './components/package-list/package-list.component';
 import { PackageDetailComponent } from './components/package-detail/package-detail.component';
+import { PaymentComponent } from './components/payment/payment.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component'
 
 // const routes: Routes = [
 //  ];
@@ -32,6 +34,15 @@ const routes: Routes = [
     {
         path:"detail",
         component: PackageDetailComponent
+    },
+    {
+        path:"payment",
+        component: PaymentComponent
+
+    },
+    {
+        path:"dashboard",
+        component: DashboardComponent
     },
     {
      path: "**",

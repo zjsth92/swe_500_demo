@@ -1,58 +1,26 @@
-<div class="container">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">{{title}}</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown" *ngIf="user">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="glyphicon glyphicon-user"></span>
-              <strong>{{user.name}}</strong>
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <div class="navbar-login row">
-                  <div class="col-lg-4">
-                    <p class="text-center">
-                      <img [src]="user.profileUrl" class="img-circle col-md-offset-2">
-                      <!--<span class="glyphicon glyphicon-user icon-size"></span>-->
-                    </p>
-                  </div>
-                  <div class="col-lg-8">
-                    <h4 class="text-left"><strong>{{user.name}}</strong></h4>
-                    <p class="text-left small">{{user.email}}</p>
-                  </div>
-                </div>
-              </li>
-              <li role="separator" class="divider"></li>
-              <div class="navbar-login navbar-login-session">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <p>
-                      <a href="#" class="btn btn-danger btn-block" (click)="logout()" >Log Out</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-</div>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded" id="app-nav-bar">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">{{title}}</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngIf="isAdmin()" >
+        <a href="/dashboard" class="nav-link text-white" style="padding-top:22px;">Dashboard</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav" id="app-navbar-nav">
+      <li class="nav-item">
+        <img class="img-circle" id="profile-nav-item-img" [src]=getProfileUrl()>
+        <div id="profile-nav-item-info">
+          <h4 class="text-white"><strong>{{getUserName()}}</strong></h4>
+          <p class="text-white small">{{getUserEmail()}}</p>
+        </div>
+      </li>
+      <li class="nav-item" id="logout-btn">
+        <a class="nav-link btn btn-danger" href="#" (click)="logout()" style="color:antiquewhite">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
