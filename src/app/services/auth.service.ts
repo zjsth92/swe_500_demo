@@ -22,7 +22,6 @@ export class AuthenService {
 
     }
     private mockData: User[] = require('../mock/users.json');
-    private loginUser = new Subject<LoginUser>();
 
     public login(username: string, password: string): Promise<LoginUser> {
         return new Promise((resolve, reject) => {
@@ -36,8 +35,6 @@ export class AuthenService {
                     } as LoginUser;
                     localStorage.setItem('user', JSON.stringify(loginUser));
                     console.log("login");
-                    console.log(this.loginUser);
-                    this.loginUser.next(loginUser)
                     resolve(loginUser);
                     return;
                 }
@@ -48,15 +45,19 @@ export class AuthenService {
 
     public logout() {
         localStorage.removeItem('user');
-        this.loginUser.next(null)
     }
 
-    public getLoginUser(): Observable<LoginUser> {
-        return this.loginUser.asObservable();
+    public getLoginUser(): LoginUser {
+        return JSON.parse(localStorage.getItem("user")) as LoginUser;
     }
 
     public isAuthenticated(): boolean {
-        return localStorage.getItem("user")
+        return localStorage.getItem("user") != null
+    }
+
+    public isAdmin(): boolean {
+         let user = JSON.parse(localStorage.getItem("user")) as LoginUser
+         return user.isAdmin
     }
 
 }

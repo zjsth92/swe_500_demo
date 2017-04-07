@@ -14,6 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './services/guard.service';
 import { AuthenService } from './services/auth.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PackageListComponent,
     PackageDetailComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

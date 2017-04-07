@@ -10,18 +10,27 @@ export class NavbarComponent implements OnInit {
 
   constructor( @Inject("auth") private auth) { }
 
-  private title: string = "ITUGOGO";
-  private user: LoginUser;
+  private title: string = "HolidayPlan";
 
   ngOnInit() {
-    this.auth.getLoginUser()
-      .subscribe((loginUser:LoginUser) => {
-        console.log("subscribe");
-        console.log(loginUser);
-        if(loginUser){
-          this.user = loginUser;
-        } 
-      });
+  }
+
+  getProfileUrl() {
+    let user: LoginUser = this.auth.getLoginUser();
+    return user.profileUrl
+  }
+  getUserName() {
+    let user: LoginUser = this.auth.getLoginUser();
+    return user.name
+  }
+  getUserEmail() {
+    let user: LoginUser = this.auth.getLoginUser();
+    console.log(user)
+    return user.email
+  }
+
+  isAdmin() {
+    return this.auth.isAdmin();
   }
 
   logout() {

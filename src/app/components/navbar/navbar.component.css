@@ -15,3 +15,20 @@
     height: 60px;
     margin: 0 auto;
 }
+#profile-nav-item-img {
+    float: left;
+}
+#profile-nav-item-info {
+    float: right;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#app-nav-bar {
+    /*margin-bottom: 16px;*/
+}
+#logout-btn {
+    padding-top: 16px;
+}
+#app-navbar-nav {
+    margin-right: 24px;
+}

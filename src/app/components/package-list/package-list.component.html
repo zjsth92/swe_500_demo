@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container" id="list-container">
+<div class="container-fluid" id="list-container">
   <div class="row">
       <div class="image" *ngFor="let package of packages" id="{{package.city}}">
         <a href="/detail"><img class="lazy" [src]="package.backgroundUrl" style="display: block;">
